@@ -1,18 +1,36 @@
 {
-  "name": "test",
+  "name": "shared-infra-modules",
   "version": "1.0.0",
-  "license": "MIT",
-  "scripts": {
-    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+  "description": "A monorepo to gather shared modules managed by the Infra team",
+  "main": "index.js",
+  
+  "author": "Anatoly Katzman <anatoly.katzman@sisense.com>",
+  "license": "ISC",
+  
+  "devDependencies": {
+    
+    "husky": "^8.0.0",
+    "if-env": "^1.0.4",
+    "lerna": "^6.5.1",
+    "lint-staged": "^13.1.2",
+    "nx": "15.9.2",
+    "prettier": "^2.8.1"
   },
   "dependencies": {
-	"apps-a-middleware": "1.2.2",
-	"lodash": "4.17.10"
+    "vm2": "^3.9.15",
+    "minimist": "1.2.3",
+    "handlebars": "4.7.5"
   },
-  "devDependencies": {
-    "@types/express": "^4.17.7",
-    "@types/nodemailer": "^6.4.0",
-    "ts-node-dev": "^1.0.0-pre.56",
-    "typescript": "^3.9.7"
-  }
+  "private": true,
+  "lint-staged": {
+    "*.{js,ts,json}": [
+      "yarn format"
+    ],
+    "*.{json,yaml,yml,md}": [
+      "yarn format"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

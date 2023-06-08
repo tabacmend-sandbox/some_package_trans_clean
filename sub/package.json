@@ -1,0 +1,15 @@
+{
+  "name": "@sisense/temp-mono-kuberenetes",
+  "version": "1.3.2",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  
+    "lodash": "4.17.21",
+    "moment": "2.29.4",
+    "minimist": "1.2.3",
+    "handlebars": "4.7.4"
+  }
+}
