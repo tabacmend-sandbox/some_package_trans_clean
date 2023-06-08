@@ -9,7 +9,7 @@
   
     "lodash": "4.17.21",
     "moment": "2.29.4",
-    "minimist": "1.2.3",
+    "minimist": "1.2.6",
     "handlebars": "4.7.4"
   }
 }
